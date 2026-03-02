@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electric Tech Hub</title>
+    <style>
+        /* Element Selectors */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }        
+
+        ul, ol {
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Class Selectors */
+        .highlight {
+            background-color: #1a2a5e;
+            color: #00d4ff;
+            padding: 0.25em 0.5em;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .feature-card {
+            background-color: #1a2a5e;
+            padding: 1.5rem;
+            border: 2px solid #ff00ff;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            border-color: #00d4ff;
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+        }
+
+        .feature-card h3 {
+            margin-top: 0;
+        }
+
+        .accent-text {
+            color: #ff00ff;
+            font-weight: bold;
+        }
+
+        .cyan-accent {
+            color: #00d4ff;
+            font-weight: bold;
+        }
+
+        .intro-text {
+            font-size: 1.1rem;
+            line-height: 1.9;
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background-color: #1a2a5e;
+            border-left: 4px solid #ff00ff;
+            border-radius: 4px;
+        }
+
+        .code-example {
+            background-color: #0a0e27;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 4px;
+            border: 1px solid #00d4ff;
+            font-family: 'Courier New', monospace;
+            color: #00d4ff;
+            overflow-x: auto;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 1rem;
+            margin: 1.5rem 0;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 0.75rem 1.5rem;
+            background-color: #ff00ff;
+            color: #0a0e27;
+            border: none;
+            border-radius: 4px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #00d4ff;
+            box-shadow: 0 0 15px rgba(0, 212, 255, 0.5);
+        }
+
+        .btn-secondary {
+            background-color: #00d4ff;
+            color: #0a0e27;
+        }
+
+        .btn-secondary:hover {
+            background-color: #ff00ff;
+            box-shadow: 0 0 15px rgba(255, 0, 255, 0.5);
+        }
+
+        /* ID Selector */
+        #hero-section {
+            color: #00d4ff;
+            text-align: center;
+            border:none;
+            border-bottom: 3px dashed #ff00ff;
+            background-color: #0f1a3d; 
+            padding: 2rem;          
+            margin-bottom: 2rem;      
+            border-left: 5px solid #00d4ff; 
+            border-radius: 8px; 
+            
+        }
+
+        #contact-section {
+            border: 2px solid #ff00ff;
+            text-align: center;
+            background-color: #0f1a3d; 
+            padding: 2rem;          
+            margin-bottom: 2rem;      
+            border-left: 5px solid #00d4ff; 
+            border-radius: 8px;
+        
+        }
+
+        a:hover {
+        color: #ff00ff;
+        }
+
+
+        
+    </style>
+</head>
+<body style="background-color: #0a0e27; color: #e0e0e0; font-family: Arial, Helvetica, sans-serif; line-height: 1.6;">
+    <header style="background-color: #0f1a3d; padding-inline: 2rem; border-bottom: 3px solid #ff00ff; margin-bottom: 2rem;">
+        <div style="max-width: 1200px; margin: 0auto; max-width: 1200px; margin: 0auto; padding-left: 1.5rem; padding-right: 1.5rem; " class="container">
+            <h1 style="color: #ff00ff; font-size: 2.5rem; margin-bottom: 0.5rem;">CSS Hub</h1>
+            <p class="cyan-accent">Powering Innovation with Code</p>
+        </div>
+    </header>
+
+    <main class="container"  style="max-width: 1200px; margin: 0auto; max-width: 1200px; margin: 0auto; padding-left: 1.5rem; padding-right: 1.5rem; ">
+        <!-- Hero Section -->
+        <section id="hero-section" class="section">
+            <h1 style="color: #ff00ff; font-size: 2.5rem; margin-bottom: 0.5rem;" >Welcome to the Future</h1>
+            <p>This page is a complete CSS learning guide that demonstrates the concepts you're studying. All the styling you see is built with the CSS fundamentals you're learning right now. Explore each section to understand selectors, properties, units, and color schemes.</p>
+            <div class="button-group">
+                <button class="btn">Explore Now</button>
+                <button class="btn btn-secondary">Learn More</button>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="section">
+            <h2 style="color: #00d4ff; font-size: 1.8rem; margin-top: 2rem; margin-bottom: 2rem; padding-inline-end: 0.5rem; border-bottom: 2px solid #ff00ff">CSS Selectors</h2>
+            <div class="intro-text">
+                <p>CSS selectors are patterns used to select the HTML elements you want to style. There are three main types:</p>
+            </div>
+            <ul>
+                <li><span class="highlight-magenta">Element Selectors:</span> Use when you want to style ALL instances of an element (all paragraphs, all links, etc.)</li>
+                <li><span class="highlight-magenta">Class Selectors:</span> Use when you want to style MULTIPLE elements that share a style, but not all of that element type</li>
+                <li><span class="highlight-magenta">ID Selectors:</span> Use when you want to style ONE specific, unique element on the page</li>
+            </ul>
+        </section>
+
+        <!-- Features Section -->
+        <section class="section">
+            <h2 style="color: #00d4ff; font-size: 1.8rem; margin-top: 2rem; margin-bottom: 2rem; padding-inline-end: 0.5rem; border-bottom: 2px solid #ff00ff">Key Features</h2>
+            <p>Discover what makes our platform <span class="accent-text">revolutionary</span>:</p>
+            
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3 style="color: #ff00ff; font-size: 1.3rem; margin-bottom: 0.5rem;" >Selectors</h3>
+                    <p>Master the three main ways to target and style HTML elements. Element selectors let you style all instances of a tag, class selectors let you reuse styles across multiple elements, and ID selectors let you style unique elements. Understanding how and when to use each selector is the foundation of CSS. Once you master selectors, you'll be able to target any element on your page and apply exactly the styles you need, giving you complete control over your design.</p>
+                </div>
+                <div class="feature-card">
+                    <h3 style="color: #ff00ff; font-size: 1.3rem; margin-bottom: 0.5rem;">Properties</h3>
+                    <p>Learn the CSS properties that control every visual aspect of your page. From text styling with color and font-size to spacing with padding and margin, CSS properties are your tools for design. Background-color, borders, and more give you endless creative possibilities. Each property does one specific job, and when combined together, they create beautiful, professional websites. Understanding what each property does and how to use it is the key to becoming a CSS expert.</p>
+                </div>
+                <div class="feature-card">
+                    <h3 style="color: #ff00ff; font-size: 1.3rem; margin-bottom: 0.5rem;" >Measurement Units</h3>
+                    <p>Use the right units to create responsive, flexible designs that work everywhere. Pixels give you precise control, rem units scale with your root font size, em units scale with their parent element, and percentages create flexible layouts. Choosing the right unit for each situation makes your CSS more powerful and your designs more adaptable. Learning when to use px, rem, em, and % is what separates beginners from skilled CSS developers.</p>
+                </div>
+                <div class="feature-card">
+                    <h3 style="color: #ff00ff; font-size: 1.3rem; margin-bottom: 0.5rem;" >Color & Styling</h3>
+                    <p>Bring your designs to life with color, backgrounds, borders, and visual effects. CSS lets you control every color on your page, create gradients, add borders and shadows, and style text in countless ways. Understanding color theory and how colors work together helps you create designs that are both beautiful and professional. With CSS color and styling properties, you can transform a boring HTML page into something visually stunning and engaging.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CSS Concepts Section -->
+        <section class="section">
+            <h2 style="color: #00d4ff; font-size: 1.8rem; margin-top: 2rem; margin-bottom: 2rem; padding-inline-end: 0.5rem; border-bottom: 2px solid #ff00ff">CSS Fundamentals in Action</h2>
+            <p>This page demonstrates the <span class="highlight">CSS concepts</span> you're learning:</p>
+            
+            <h3 style="color: #ff00ff; font-size: 1.3rem; margin-bottom: 0.5rem;" >Selectors Used</h3>
+            <ul>
+                <li><span class="cyan-accent">Element Selectors:</span> body, header, h1, h2, p, a, ul, li, footer</li>
+                <li><span class="cyan-accent">Class Selectors:</span> .container, .section, .feature-card, .btn, .highlight</li>
+                <li><span class="cyan-accent">ID Selectors:</span> #hero-section, #features, #contact-section</li>
+            </ul>
+
+            <h3 style="color: #ff00ff; font-size: 1.3rem; margin-bottom: 0.5rem;" >CSS Properties Demonstrated</h3>
+            <ul>
+                <li><span class="accent-text">Color & Background:</span> color, background-color, background (gradient)</li>
+                <li><span class="accent-text">Spacing:</span> padding, margin (using px, rem, and %)</li>
+                <li><span class="accent-text">Typography:</span> font-size, font-weight, line-height, text-align</li>
+                <li><span class="accent-text">Borders & Radius:</span> border, border-bottom, border-radius</li>
+                <li><span class="accent-text">Advanced:</span> box-shadow, transition, text-shadow</li>
+            </ul>
+
+            <h3>Measurement Units Used</h3>
+            <ul>
+                <li><span class="cyan-accent">Pixels (px):</span> Fixed sizes like borders and shadows</li>
+                <li><span class="cyan-accent">Rem (rem):</span> Relative to root font size, used for responsive spacing</li>
+                <li><span class="cyan-accent">Em (em):</span> Relative to parent element, used in padding</li>
+            </ul>
+        </section>
+
+        <!-- Color Palette Section -->
+        <section class="section">
+            <h2 style="color: #00d4ff; font-size: 1.8rem; margin-top: 2rem; margin-bottom: 2rem; padding-inline-end: 0.5rem; border-bottom: 2px solid #ff00ff">Color Scheme</h2>
+            <p>Our <span class="accent-text">electric color palette</span> creates a modern, high-tech aesthetic:</p>
+            
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3 style="color: #ff00ff;">Magenta (#ff00ff)</h3>
+                    <p>Primary accent color used for headings, borders, and interactive elements. Creates energy and draws attention.</p>
+                </div>
+                <div class="feature-card">
+                    <h3 style="color: #00d4ff;">Cyan (#00d4ff)</h3>
+                    <p>Secondary accent color used for text highlights and hover states. Provides contrast and visual interest.</p>
+                </div>
+                <div class="feature-card">
+                    <h3 style="color: #0f1a3d;">Cobalt (#0f1a3d)</h3>
+                    <p>Primary background color. Deep, dark blue creates a professional tech aesthetic.</p>
+                </div>
+                <div class="feature-card">
+                    <h3 style="color: #0a0e27;">Navy (#0a0e27)</h3>
+                    <p>Darkest background color. Used for the main page background and code examples.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact-section" class="section">
+            <h2 style="color: #00d4ff; font-size: 1.8rem; margin-top: 2rem; margin-bottom: 2rem; padding-inline-end: 0.5rem; border-bottom: 2px solid #ff00ff">Get Started Today</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <div class="button-group">
+                <button class="btn">Sign Up</button>
+                <button class="btn btn-secondary">Contact Us</button>
+            </div>
+        </section>
+
+        <!-- Navigation Example -->
+        <section class="section">
+            <h2 style="color: #00d4ff; font-size: 1.8rem; margin-top: 2rem; margin-bottom: 2rem; padding-inline-end: 0.5rem; border-bottom: 2px solid #ff00ff">Quick Links</h2>
+            <nav>
+                <ul>
+                    <li style="color: #00d4ff;" ><a href="#hero-section"><strong>Home</strong></a></li>
+                    <li style="color: #00d4ff;"><a href="#features">Features</a></li>
+                    <li style="color: #00d4ff;"><a href="#contact-section">Contact</a></li>
+                    <li style="color: #00d4ff;"><a href="#">Documentation</a></li>
+                    <li style="color: #00d4ff;"><a href="#">Support</a></li>
+                </ul>
+            </nav>
+        </section>
+    </main>
+
+    <footer style="background-color: #0f1a3d; color: #00d4ff; padding-inline: 2rem; text-align: center; border-top:3px solid #00d4ff">
+        <div class="container"  style="max-width: 1200px; margin: 0auto; max-width: 1200px; margin: 0auto; padding-left: 1.5rem; padding-right: 1.5rem; ">
+            <p>&copy; 2026 TCD CIS All rights reserved. | Powered by Innovation</p>
+        </div>
+    </footer>
+</body>
+</html>
